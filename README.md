@@ -4,7 +4,7 @@
 **Student Name:** Moises Rivero III
 **Selected Framework:** Next.js 14 (App Router) with Static Site Generation (`output: 'export'`)
 
-**Live Website:** https://YOUR-GITHUB-USERNAME.github.io/pangasinan-heritage-showcase/
+**Live Website:** https://devrivero14-png.github.io/pangasinan-heritage-showcase/
 
 ---
 
