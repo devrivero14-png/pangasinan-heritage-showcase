@@ -1,0 +1,33 @@
+.form {
+  padding: var(--space-4);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+}
+.fields { display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+.field { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.label { font-size: var(--text-sm); font-weight: 700; color: var(--color-gulf); }
+
+.inputWrap { position: relative; }
+.icon { position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: var(--color-gulf); pointer-events: none; }
+.inputWrap .input { padding-left: 2.6rem; }
+
+.input {
+  width: 100%;
+  min-height: var(--tap-target);
+  padding: 0 var(--space-3);
+  font: inherit;
+  font-size: var(--text-base); /* 16px stops iOS from zooming in */
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border: 1.5px solid #9aa8b1;  /* 3:1 against white for the field boundary */
+  border-radius: var(--radius-md);
+}
+.input:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 1px; border-color: var(--color-gulf); }
+
+.status { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); min-height: 40px; margin-top: var(--space-2); }
+.count { margin: 0; font-size: var(--text-sm); color: var(--color-muted); }
+
+@media (min-width: 40rem) {
+  .fields { grid-template-columns: 1fr 14rem; align-items: end; }
+}

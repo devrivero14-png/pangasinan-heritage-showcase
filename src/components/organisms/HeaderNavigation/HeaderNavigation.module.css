@@ -1,0 +1,50 @@
+.header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgb(255 255 255 / 0.96);
+  border-bottom: 1px solid var(--color-line);
+}
+@supports (backdrop-filter: blur(8px)) {
+  .header { background: rgb(255 255 255 / 0.85); backdrop-filter: blur(8px); }
+}
+.inner {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: var(--space-2);
+  min-height: 4rem;
+}
+
+.brand { flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--color-gulf); min-height: var(--tap-target); }
+.seal {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  border: 2px solid var(--color-gulf);
+  box-shadow: inset 0 0 0 3px var(--color-paper), inset 0 0 0 4px var(--color-sunset);
+  font-family: var(--font-display); font-size: 0.8rem;
+}
+.brandText { display: flex; flex-direction: column; font-family: var(--font-display); font-size: 1.05rem; line-height: 1.1; }
+.brandSub { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 600; color: var(--color-muted); }
+
+.toggle {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: var(--tap-target); padding: 0 var(--space-3);
+  border: 1.5px solid var(--color-line); border-radius: var(--radius-md);
+  background: var(--color-paper); color: var(--color-gulf);
+  font: inherit; font-weight: 700; cursor: pointer;
+}
+
+/* Mobile: menu hidden until opened, then full-width under the bar */
+.nav { display: none; flex-basis: 100%; padding-bottom: var(--space-3); }
+.nav.open { display: block; }
+.list { margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-1); }
+
+@media (max-width: 23rem) {
+  .brandText { font-size: 0.95rem; }
+  .toggle { padding-inline: var(--space-2); }
+}
+
+@media (min-width: 48rem) {
+  .brand { flex: 0 1 auto; }
+  .toggle { display: none; }
+  .nav, .nav.open { display: block; flex-basis: auto; padding-bottom: 0; }
+  .list { flex-direction: row; gap: var(--space-1); }
+}

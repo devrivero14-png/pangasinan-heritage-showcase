@@ -1,0 +1,32 @@
+.page { padding-block: var(--space-4) var(--space-6); }
+.back { margin-left: calc(var(--space-3) * -1); margin-bottom: var(--space-3); }
+
+.layout { display: grid; gap: var(--space-6); }
+.photoCard {
+  padding: var(--space-3);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.photo { border-radius: var(--radius-md); }
+
+.content { display: flex; flex-direction: column; gap: var(--space-4); }
+.facts {
+  display: grid; gap: var(--space-3);
+  margin: 0; padding: var(--space-4);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+}
+.fact { display: grid; grid-template-columns: 6.5rem 1fr; gap: var(--space-3); }
+.fact dt { font-size: var(--text-sm); color: var(--color-muted); }
+.fact dd { margin: 0; font-weight: 600; }
+.prose { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.related { margin-top: var(--space-7); display: flex; flex-direction: column; gap: var(--space-5); }
+
+@media (min-width: 60rem) {
+  .layout { grid-template-columns: 1.25fr 1fr; align-items: start; }
+  .photoCard { position: sticky; top: 5.5rem; }
+}

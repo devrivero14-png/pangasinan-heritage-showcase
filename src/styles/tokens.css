@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Design tokens — the single source of colour, type, spacing and radius.
+   Atoms and molecules only use these variables, never raw values, so the
+   whole site can be re-themed here. Documented in the "Color Tokens" atom.
+   ========================================================================== */
+:root {
+  /* Colour — Lingayen Gulf blue, salt white, sunset orange */
+  --color-gulf: #0e3a53;          /* headings, primary buttons, links (12.0:1 on white) */
+  --color-gulf-soft: #1f5573;     /* secondary text on tags (8.0:1 on white) */
+  --color-ink: #13222c;           /* body text (16.2:1 on white) */
+  --color-muted: #52616b;         /* secondary text (5.9:1 on salt) */
+  --color-salt: #f3f6f7;          /* page background */
+  --color-paper: #ffffff;         /* cards, inputs */
+  --color-line: #d6dee3;          /* borders and dividers */
+  --color-sunset: #f07f2d;        /* decorative accent only (2.7:1, not for text) */
+  --color-sunset-text: #a6470b;   /* accent used for text (6.0:1 on white) */
+  --color-sunset-soft: #fde6d3;   /* soft accent background */
+  --color-focus: #0e3a53;         /* keyboard focus ring */
+
+  /* Typography */
+  --font-display: var(--font-alfa), "Rockwell", "Georgia", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.375rem;    /* 22px */
+  --text-2xl: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);   /* 28 → 40px */
+  --text-3xl: clamp(2.25rem, 1.5rem + 3.6vw, 4rem);   /* 36 → 64px */
+  --leading-tight: 1.1;
+  --leading-body: 1.6;
+
+  /* Spacing (4px scale) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Radius & elevation */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgb(19 34 44 / 0.06), 0 6px 18px rgb(19 34 44 / 0.06);
+
+  /* Layout */
+  --container: 72rem;      /* 1152px max content width */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
+  --tap-target: 44px;      /* WCAG 2.5.5 minimum touch size */
+}
